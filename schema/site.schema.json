@@ -29,6 +29,10 @@
       "type": "string",
       "description": "File in public/ used for link previews (1200x630). Optional."
     },
+    "socialImageAlt": {
+      "type": "string",
+      "description": "Short description of the link preview image, for screen readers."
+    },
     "language": {
       "type": "string",
       "minLength": 1

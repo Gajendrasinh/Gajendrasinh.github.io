@@ -56,6 +56,20 @@ test('head tags come from site.json', () => {
   else assert.ok(!html.includes('rel="canonical"'), 'no canonical link is written while site.url is empty');
 });
 
+test('the link preview image is announced when one is set', async () => {
+  const { url, socialImage } = content.site;
+  if (url && socialImage) {
+    const image = url.replace(/\/?$/, '/') + socialImage;
+    assert.ok(html.includes(`<meta property="og:image" content="${image}">`), 'og:image points at the public address');
+    assert.ok(html.includes(`<meta name="twitter:image" content="${image}">`));
+    assert.ok(html.includes('<meta name="twitter:card" content="summary_large_image">'));
+    await access(path.join(work, 'dist', socialImage));
+  } else {
+    assert.ok(!html.includes('og:image'), 'no og:image without an address and an image');
+    assert.ok(html.includes('<meta name="twitter:card" content="summary">'));
+  }
+});
+
 test('structured data and page data are valid JSON', () => {
   const ld = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   assert.equal(ld.mainEntity.name, content.profile.name);

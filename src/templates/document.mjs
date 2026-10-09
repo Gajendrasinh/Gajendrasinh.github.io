@@ -15,6 +15,7 @@ function dataScripts(pageData) {
 export function fullDocument({ content, body, pageData, jsonLd, assets }) {
   const { site, profile, hero } = content;
   const base = site.url ? site.url.replace(/\/?$/, '/') : '';
+  const image = base && site.socialImage ? base + site.socialImage : '';
   const head = [
     '<meta charset="utf-8">',
     '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">',
@@ -31,10 +32,14 @@ export function fullDocument({ content, body, pageData, jsonLd, assets }) {
     `<meta property="og:description" content="${esc(site.description)}">`,
     `<meta property="og:locale" content="${esc(site.locale)}">`,
     base ? `<meta property="og:url" content="${esc(base)}">` : '',
-    base && site.socialImage ? `<meta property="og:image" content="${esc(base + site.socialImage)}">` : '',
+    image ? `<meta property="og:image" content="${esc(image)}">` : '',
+    image ? '<meta property="og:image:width" content="1200">' : '',
+    image ? '<meta property="og:image:height" content="630">' : '',
+    image && site.socialImageAlt ? `<meta property="og:image:alt" content="${esc(site.socialImageAlt)}">` : '',
     `<meta property="profile:first_name" content="${esc(profile.givenName)}">`,
     `<meta property="profile:last_name" content="${esc(profile.familyName)}">`,
-    `<meta name="twitter:card" content="${base && site.socialImage ? 'summary_large_image' : 'summary'}">`,
+    `<meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">`,
+    image ? `<meta name="twitter:image" content="${esc(image)}">` : '',
     '<link rel="icon" href="favicon.svg" type="image/svg+xml">',
     '<link rel="preconnect" href="https://fonts.googleapis.com">',
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',

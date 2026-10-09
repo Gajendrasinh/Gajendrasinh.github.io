@@ -1,7 +1,8 @@
 {
   "$schema": "../schema/site.schema.json",
   "url": "https://gajendrasinh.github.io",
-  "socialImage": "",
+  "socialImage": "social-preview.png",
+  "socialImageAlt": "Gajendrasinh Zala, Full Stack and AI Engineer in Singapore. Open to new roles.",
   "language": "en",
   "locale": "en_SG",
   "shortTitle": "Gajendrasinh Zala",
