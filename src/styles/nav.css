@@ -4,6 +4,7 @@
 .brand{font-weight:600;font-size:1.19rem;letter-spacing:-.022em;white-space:nowrap;
   color:var(--b1);background:linear-gradient(90deg,var(--b1),var(--b2) 38%,var(--b3) 70%,var(--b4));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 @supports not ((-webkit-background-clip:text) or (background-clip:text)){.brand{-webkit-text-fill-color:currentColor}}
+.brand{margin-right:auto}
 .pill-nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,34px)}
 .pill-nav a{text-decoration:none;font-size:.8rem;letter-spacing:-.01em;white-space:nowrap;color:var(--ink-soft);transition:color .3s var(--ease)}
 .pill-nav a:hover,.pill-nav a.on{color:var(--ink)}
@@ -16,3 +17,17 @@
 .bars::before{top:0}.bars::after{top:7.5px}
 .top.open .bars::before{top:3.75px;transform:rotate(45deg)}
 .top.open .bars::after{top:3.75px;transform:rotate(-45deg)}
+/* day / night switch */
+.theme-btn{all:unset;box-sizing:border-box;flex:none;display:grid;place-items:center;width:44px;height:44px;margin-inline:-8px;cursor:pointer;color:var(--ink-soft);border-radius:50%;transition:color .3s var(--ease)}
+.theme-btn::before{content:"";grid-area:1/1;width:30px;height:30px;border-radius:50%;background:var(--ctl);opacity:0;transform:scale(.8);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.theme-btn svg{grid-area:1/1;position:relative}
+.theme-btn .moon{display:var(--moon)}
+.theme-btn .sun{display:var(--sun)}
+.theme-btn:hover{color:var(--ink)}
+.theme-btn:hover::before,.theme-btn:focus-visible::before{opacity:1;transform:none}
+.theme-btn:active svg{transform:scale(.88)}
+.theme-btn svg{transition:transform .25s var(--ease)}
+.theme-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-6px}
+@media (prefers-reduced-motion:reduce){.theme-btn,.theme-btn::before,.theme-btn svg{transition:none}}
+/* the page cross-fades when the theme changes (browsers with view transitions) */
+::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.28,.11,.32,1)}

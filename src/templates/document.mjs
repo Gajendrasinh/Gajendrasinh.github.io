@@ -8,6 +8,9 @@ const inlineJson = (value) => JSON.stringify(value).replace(/</g, '\\u003c');
 
 const RESET = ':root{color-scheme:light;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}';
 
+/** Runs before the first paint so a saved day / night choice never flashes the other theme. Key matches THEME_KEY in src/scripts/lib/env.js. */
+const THEME_BOOT = "<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>";
+
 function dataScripts(pageData) {
   return `<script type="application/json" id="page-data">${inlineJson(pageData)}</script>`;
 }
@@ -45,6 +48,7 @@ export function fullDocument({ content, body, pageData, jsonLd, assets }) {
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     `<link rel="stylesheet" href="${esc(site.fonts)}">`,
     `<link rel="preload" as="image" href="${esc(hero.video.still)}">`,
+    THEME_BOOT,
     `<style>${RESET}</style>`,
     `<link rel="stylesheet" href="${esc(assets.css)}">`,
     `<script type="application/ld+json">${inlineJson(jsonLd)}</script>`,
@@ -67,6 +71,7 @@ export function embedDocument({ content, body, pageData, jsonLd, css, js }) {
   const { site } = content;
   return `<title>${esc(site.shortTitle)}</title>
 <link rel="stylesheet" href="${esc(site.fonts)}">
+${THEME_BOOT}
 <style>
 ${css}</style>
 <script type="application/ld+json">${inlineJson(jsonLd)}</script>

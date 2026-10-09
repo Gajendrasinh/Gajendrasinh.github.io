@@ -40,6 +40,7 @@ export function buildPageData(content) {
     roles: h.roles,
     controls: h.controls,
     menu: site.navigation.menu,
+    theme: site.navigation.theme,
     hints: { flipHover: a.badge.hint.hover, skillsTouch: s.intro.touch },
     skills: {
       families: s.families.map((f) => f.name),

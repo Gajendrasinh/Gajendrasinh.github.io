@@ -12,10 +12,11 @@ import { initTimeline } from './modules/timeline.js';
 import { initContact } from './modules/contact.js';
 import { initResume } from './modules/resume.js';
 import { initReveal } from './modules/reveal.js';
+import { initTheme } from './modules/theme.js';
 
 const context = { data: readPageData(), ...readEnvironment() };
 
-const modules = [initSkills, initBadge, initHeroVideo, initHeroRoles, initAccordion, initNavigation, initCountUp, initTimeline, initContact, initResume, initReveal];
+const modules = [initTheme, initSkills, initBadge, initHeroVideo, initHeroRoles, initAccordion, initNavigation, initCountUp, initTimeline, initContact, initResume, initReveal];
 
 for (const init of modules) {
   try {

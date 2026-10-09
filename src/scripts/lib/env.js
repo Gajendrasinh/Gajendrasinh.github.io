@@ -1,5 +1,8 @@
 // What the page can know about its visitor's device, plus the data the build left in the page.
 
+/** Where the visitor's day / night choice is kept. The same key is read early by the page head. */
+export const THEME_KEY = 'theme';
+
 /** Data written by the build into <script type="application/json" id="page-data">. */
 export function readPageData() {
   const node = document.getElementById('page-data');

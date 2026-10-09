@@ -39,7 +39,7 @@ dist/               build output (generated, not committed)
 
 | File | What it holds |
 |---|---|
-| `site.json` | Page title and description, site address, navigation, section order, footer |
+| `site.json` | Page title and description, site address, navigation, day/night switch labels, section order, footer |
 | `profile.json` | Name, contact details, links, resume and photo files, availability |
 | `hero.json` | Typed roles, headline, tagline, buttons, video, client names |
 | `about.json` | Introduction, "hire me for" list, quick facts, quote, ID card |
@@ -73,6 +73,10 @@ is missing, and more. The build runs the same checks and stops if any fail.
 - **Reorder or remove sections:** edit `sections` in `site.json`. Navigation items must point to listed sections.
 - **Replace the resume or video:** put the file in `public/` and update the file name in `profile.json` or `hero.json`.
 - **Add a new kind of section:** create `src/templates/sections/<id>.mjs`, register it in `SECTIONS` in `page.mjs`, add `content/<id>.json` with a schema, and list it in `site.json`.
+
+### Day and night mode
+
+The page follows the visitor's device setting. The switch in the header overrides it and the choice is remembered in that browser; choosing the device's own setting hands control back to the device. Colours for both modes live in `src/styles/tokens.css`.
 
 ## Going live
 

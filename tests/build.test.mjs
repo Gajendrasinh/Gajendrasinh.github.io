@@ -70,6 +70,18 @@ test('the link preview image is announced when one is set', async () => {
   }
 });
 
+test('the day / night switch is in the header and a saved choice is applied before first paint', async () => {
+  const { toDark, toLight } = content.site.navigation.theme;
+  assert.match(html, new RegExp(`<button class="theme-btn" id="themebtn" type="button" hidden aria-label="${toDark}"`), 'the switch stays hidden until its script runs');
+  const data = JSON.parse(html.match(/<script type="application\/json" id="page-data">([\s\S]*?)<\/script>/)[1]);
+  assert.deepEqual(data.theme, { toDark, toLight });
+  const boot = html.indexOf("localStorage.getItem('theme')");
+  assert.ok(boot > 0 && boot < html.indexOf('rel="stylesheet" href="assets/'), 'the saved theme is read before the stylesheet loads');
+  const css = await readFile(path.join(work, 'dist', result.assets.css), 'utf8');
+  assert.ok(css.includes(':root[data-theme=dark]') || css.includes(':root[data-theme="dark"]'), 'night colours can be forced');
+  assert.ok(css.includes(':root:not([data-theme=light])') || css.includes(':root:not([data-theme="light"])'), 'day mode can be forced on a dark device');
+});
+
 test('structured data and page data are valid JSON', () => {
   const ld = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   assert.equal(ld.mainEntity.name, content.profile.name);

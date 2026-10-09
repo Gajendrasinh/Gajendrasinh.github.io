@@ -23,6 +23,7 @@
   --gutter:max(16px,5vw);   /* 5% each side: the content column is 90% of the page */
   --sec:clamp(72px,10vw,140px);
   --r-lg:28px; --r-md:18px;
+  --moon:block; --sun:none;   /* the header switch shows where a click will take you */
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -37,6 +38,7 @@
     --f1:#19344F; --f2:#2B2B4B; --f3:#412A4D; --f4:#4F232D; --f5:#4F3A1A; --f6:#21452C; --f-fg:#F5F5F7;
     --c1:#0071E3; --c2:#5856D6; --c3:#8944AB; --c4:#D30F45; --c5:#C93400; --c6:#1E7B34;
     --b1:#2997FF; --b2:#A78BFA; --b3:#FF6B9A; --b4:#FF9F45; color-scheme:dark;
+  --moon:none; --sun:block;
   }
 }
 :root[data-theme="dark"]{
@@ -51,4 +53,6 @@
   --f1:#19344F; --f2:#2B2B4B; --f3:#412A4D; --f4:#4F232D; --f5:#4F3A1A; --f6:#21452C; --f-fg:#F5F5F7;
   --c1:#0071E3; --c2:#5856D6; --c3:#8944AB; --c4:#D30F45; --c5:#C93400; --c6:#1E7B34;
   --b1:#2997FF; --b2:#A78BFA; --b3:#FF6B9A; --b4:#FF9F45; color-scheme:dark;
+  --moon:none; --sun:block;
 }
+:root[data-theme="light"]{color-scheme:light}

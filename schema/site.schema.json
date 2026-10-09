@@ -82,6 +82,7 @@
       "required": [
         "label",
         "menu",
+        "theme",
         "items"
       ],
       "properties": {
@@ -102,6 +103,25 @@
               "minLength": 1
             },
             "close": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "theme": {
+          "type": "object",
+          "description": "Labels for the day/night switch in the header. The label names what a click will do.",
+          "additionalProperties": false,
+          "required": [
+            "toDark",
+            "toLight"
+          ],
+          "properties": {
+            "toDark": {
+              "type": "string",
+              "minLength": 1
+            },
+            "toLight": {
               "type": "string",
               "minLength": 1
             }
