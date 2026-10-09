@@ -1,0 +1,76 @@
+{
+  "$schema": "../schema/certifications.schema.json",
+  "eyebrow": "Courses and certifications",
+  "heading": "Always *learning.*",
+  "intro": "Seven Anthropic courses on Claude, MCP and agent skills completed in 2026, Google's generative AI course, and two Red Hat certifications in Java EE and CI/CD.",
+  "verify": {
+    "label": "Verify",
+    "description": "Verify the {title} certificate"
+  },
+  "items": [
+    {
+      "issuer": "Anthropic",
+      "title": "Model Context Protocol: Advanced Topics",
+      "meta": "Issued Sep 2026 · ID m3go3ku6b7vt",
+      "url": "https://verify.skilljar.com/c/m3go3ku6b7vt"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "Model Context Protocol (MCP)",
+      "meta": "Issued Sep 2026 · ID hrtfxcp6z7e2",
+      "url": "https://verify.skilljar.com/c/hrtfxcp6z7e2"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "AI Fluency: Framework & Foundations",
+      "meta": "Issued Sep 2026 · ID va29dpe3nrs2",
+      "url": "https://verify.skilljar.com/c/va29dpe3nrs2"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "Introduction to Agent Skills",
+      "meta": "Issued Sep 2026 · ID zi7fkoq2s3du",
+      "url": "https://verify.skilljar.com/c/zi7fkoq2s3du"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "Claude 101",
+      "meta": "Issued Jul 2026 · ID 8nq46zijwrxs",
+      "url": "https://verify.skilljar.com/c/8nq46zijwrxs"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "Claude Code 101",
+      "meta": "Issued Apr 2026 · ID azuekipp722x",
+      "url": "https://verify.skilljar.com/c/azuekipp722x"
+    },
+    {
+      "issuer": "Anthropic",
+      "title": "AI Capabilities and Limitations",
+      "meta": "Issued Apr 2026 · ID jksd5cmofds7",
+      "url": "https://verify.skilljar.com/c/jksd5cmofds7"
+    },
+    {
+      "issuer": "Google",
+      "title": "Introduction to Generative AI",
+      "meta": "Issued Mar 2024 · ID 8332010",
+      "url": "https://www.cloudskillsboost.google/public_profiles/7aa8708f-4935-49b5-b283-8402ae7aba30/badges/8332010"
+    },
+    {
+      "issuer": "Red Hat",
+      "title": "Red Hat Application Development (Java EE)",
+      "meta": "Certification"
+    },
+    {
+      "issuer": "Red Hat",
+      "title": "Red Hat DevOps Pipelines & CI/CD with Jenkins",
+      "meta": "Certification"
+    },
+    {
+      "issuer": "Degree",
+      "title": "B.E. in Information Technology",
+      "meta": "Gujarat Technological University, India",
+      "kind": "degree"
+    }
+  ]
+}

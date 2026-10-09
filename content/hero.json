@@ -1,0 +1,54 @@
+{
+  "$schema": "../schema/hero.schema.json",
+  "roles": [
+    "Full Stack Engineer",
+    "AI Engineer",
+    "Technical Lead",
+    "Java Developer"
+  ],
+  "who": "__{name}__ · {location}",
+  "title": "Full Stack *&* AI Engineer.",
+  "tagline": "Senior engineer and technical lead. 12+ years shipping production platforms for MAS, OCBC, Visa, Toshiba and DHL, now with generative AI in production.",
+  "actions": [
+    {
+      "label": "Download resume",
+      "kind": "resume",
+      "primary": true
+    },
+    {
+      "label": "See my work",
+      "kind": "section",
+      "section": "work"
+    },
+    {
+      "label": "Get in touch",
+      "kind": "section",
+      "section": "contact"
+    }
+  ],
+  "video": {
+    "file": "intro-alpha.mp4",
+    "still": "intro-still.png",
+    "width": 400,
+    "height": 720,
+    "stillAlt": "3D character of Gajendrasinh Zala",
+    "canvasLabel": "Animated 3D character of Gajendrasinh Zala",
+    "videoLabel": "Video introduction from Gajendrasinh Zala"
+  },
+  "controls": {
+    "hear": "Hear my intro",
+    "mute": "Mute",
+    "play": "Play video",
+    "pause": "Pause video"
+  },
+  "clients": {
+    "label": "Platforms delivered for",
+    "names": [
+      "Monetary Authority of Singapore",
+      "OCBC Bank",
+      "Visa",
+      "Toshiba Global Commerce",
+      "DHL"
+    ]
+  }
+}

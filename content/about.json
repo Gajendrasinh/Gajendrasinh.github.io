@@ -1,0 +1,115 @@
+{
+  "$schema": "../schema/about.schema.json",
+  "eyebrow": "About",
+  "heading": "Hi, I'm __{name}.__",
+  "lead": "I build the systems regulated businesses run on: Java and Spring Boot microservices, event-driven with Kafka, with React.js and Angular front ends. In 12+ years I've shipped them for MAS, OCBC, Visa, Toshiba and DHL.",
+  "body": "At MAS I put generative AI into production: a RAG chatbot on OpenAI embeddings and pgvector for a financial platform. I work with Claude Code, GitHub Copilot and Cline every day, and I mentor engineers on AI-assisted delivery.",
+  "roles": {
+    "label": "What you can hire me for",
+    "items": [
+      {
+        "title": "Full stack engineer",
+        "text": "Java, Spring Boot, microservices and Kafka on the back end, React.js and Angular on the front end, running on AWS."
+      },
+      {
+        "title": "AI engineer",
+        "text": "RAG, embeddings, vector search and LLM APIs in production, plus MCP servers for AI agents."
+      },
+      {
+        "title": "Technical lead",
+        "text": "I led a six-service SAP integration from proof of concept to production."
+      }
+    ]
+  },
+  "actions": [
+    {
+      "label": "LinkedIn",
+      "kind": "link",
+      "link": "linkedin",
+      "primary": true
+    },
+    {
+      "label": "GitHub",
+      "kind": "link",
+      "link": "github"
+    },
+    {
+      "label": "Email me",
+      "kind": "section",
+      "section": "contact"
+    }
+  ],
+  "facts": {
+    "label": "Quick facts",
+    "items": [
+      {
+        "label": "Status",
+        "value": "Open to new roles"
+      },
+      {
+        "label": "Looking for",
+        "value": "Full stack, AI engineer or technical lead"
+      },
+      {
+        "label": "Role type",
+        "value": "Permanent"
+      },
+      {
+        "label": "Part-time",
+        "value": "Mentoring, training, freelance"
+      },
+      {
+        "label": "Based in",
+        "value": "Singapore"
+      },
+      {
+        "label": "Work pass",
+        "value": "Employment Pass"
+      },
+      {
+        "label": "Currently",
+        "value": "Monetary Authority of Singapore"
+      },
+      {
+        "label": "Experience",
+        "value": "12+ years, since 2014"
+      }
+    ]
+  },
+  "quote": "Production first, in places where downtime is not an option.",
+  "badge": {
+    "title": "Developer ID",
+    "subtitle": "Portfolio · 2026",
+    "strap": "{name}",
+    "role": "Senior Full Stack Developer & AI Engineer",
+    "fields": [
+      {
+        "label": "Base",
+        "value": "Singapore"
+      },
+      {
+        "label": "Stack",
+        "value": "Java · GenAI"
+      },
+      {
+        "label": "Since",
+        "value": "2014"
+      }
+    ],
+    "back": {
+      "title": "What I am",
+      "items": [
+        "Full stack developer",
+        "AI engineer",
+        "Java & Spring Boot specialist",
+        "Technical lead",
+        "Mentor on AI-assisted delivery"
+      ]
+    },
+    "pressLabel": "ID card, press to flip.",
+    "hint": {
+      "hover": "Hover the card to flip",
+      "touch": "Tap the card to flip"
+    }
+  }
+}

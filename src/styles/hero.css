@@ -1,0 +1,46 @@
+/* hero: the avatar stands centre stage, the name sits behind it, text and actions sit either side */
+.hero{position:relative;overflow:hidden;margin-top:-53px;padding-top:53px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:24px;padding-bottom:30px;min-height:clamp(700px,40vw,800px)}
+.stage{position:absolute;inset:8px var(--gutter) 18px;pointer-events:none}
+.ghost{position:absolute;top:44px;left:50%;width:100vw;transform:translateX(-50%);overflow:hidden;text-align:center;pointer-events:none;user-select:none;animation:ghostin 1.4s var(--ease) both}
+.ghost span{display:inline-block;font-weight:600;font-size:12vw;line-height:1.12;letter-spacing:-.045em;white-space:nowrap;padding-inline:.04em;
+  color:var(--c1);background:linear-gradient(90deg,var(--g1),var(--g2) 38%,var(--g3) 70%,var(--g4));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.ghost span{-webkit-text-fill-color:currentColor}}
+/* the roles are typed out one at a time. The letters still to come keep their space, unseen,
+   so the word stays centred while it is typed */
+.ghost b{font-weight:inherit}
+.ghost .rest{visibility:hidden}
+.ghost .caret{display:inline-block;position:relative;width:0;height:.76em;vertical-align:-.06em}
+.ghost .caret::after{content:"";position:absolute;left:.035em;top:0;width:.045em;height:100%;border-radius:.03em;background:var(--ink);animation:blink 1s steps(1) infinite}
+.ghost.typing .caret::after{animation:none}
+@keyframes blink{50%{opacity:0}}
+@keyframes ghostin{from{opacity:0;transform:translateX(-50%) translateY(30px)}to{opacity:1;transform:translateX(-50%)}}
+@keyframes menuin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.vbox{position:relative;width:min(var(--stage-w),100%);height:100%;margin:0 auto;border-radius:var(--r-lg);background:var(--stage);overflow:hidden;pointer-events:auto;cursor:pointer}
+.vbox::before{content:"";position:absolute;left:50%;bottom:4.6%;width:250px;height:30px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,var(--shade),transparent 70%)}
+.vbox .still,.vbox canvas{position:absolute;left:50%;bottom:0;height:100%;width:auto;max-width:none;transform:translateX(-50%)}
+.vbox video{position:absolute;left:0;top:0;width:2px;height:2px;opacity:0;pointer-events:none}
+/* media controls: grey translucent, as on any autoplaying Apple video */
+.vctl{position:absolute;top:18px;right:0;display:flex;gap:8px;pointer-events:auto;z-index:3}
+.vbtn{all:unset;box-sizing:border-box;height:36px;border-radius:980px;background:var(--ctl);color:var(--ink);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 15px 0 12px;font:400 .82rem var(--sans);letter-spacing:-.01em;cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease)}
+.vbtn:hover{background:color-mix(in srgb,var(--ctl) 80%,var(--ink) 12%)}
+.vbtn:active{transform:scale(.96)}
+.vbtn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.vbtn svg{width:15px;height:15px;fill:currentColor;flex:none}
+.vbtn.round{width:36px;padding:0}
+.hero-text{position:relative;z-index:2;max-width:calc(100% - 118px);padding-bottom:4px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.75rem);font-weight:600;line-height:1.05;letter-spacing:-.032em;margin:0 0 16px;text-wrap:balance}
+.hero h1 .who{display:block;font-size:1.19rem;line-height:1.3;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft);margin-bottom:10px}
+.hero h1 i{font-style:normal;color:var(--tone)}
+.hero p{margin:0;color:var(--ink-soft);font-size:clamp(1.06rem,1.55vw,1.3rem);line-height:1.38;max-width:35ch}
+/* availability: the one thing a recruiter checks first */
+.avail{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;padding:5px 13px 5px 11px;border-radius:980px;background:var(--f6);color:var(--f-fg);font-size:.88rem;font-weight:500;letter-spacing:-.01em}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.contact .avail{background:color-mix(in srgb,var(--on-night) 12%,transparent);color:var(--on-night)}
+/* employers, straight after the hero */
+.proof{border-block:1px solid var(--line)}
+.proof .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px clamp(18px,3vw,44px);padding-block:22px}
+.proof .mono{font-size:.88rem}
+.proof ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px clamp(18px,3vw,44px)}
+.proof li{font-size:1.19rem;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft)}
+.hero-cta{position:relative;z-index:2;justify-self:end;display:flex;flex-direction:column;align-items:flex-end;gap:12px;padding-bottom:4px}

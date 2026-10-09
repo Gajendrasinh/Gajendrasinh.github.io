@@ -1,0 +1,46 @@
+/* contact: the one dark tile on the page */
+.contact{position:relative;overflow:hidden;background:var(--night);color:var(--on-night);border-radius:var(--r-lg);padding:clamp(32px,6vw,84px)}
+.c-in{position:relative;display:grid;gap:28px}
+.contact .eyebrow{color:var(--night-soft)}
+.contact h2 .serif{color:var(--tone)}
+.contact .mono{color:var(--night-soft)}
+.contact p{margin:0;max-width:44ch;color:var(--night-soft);font-size:clamp(1.06rem,1.5vw,1.3rem);line-height:1.38}
+.ways{display:grid}
+.way{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:18px 0;border-top:1px solid color-mix(in srgb,var(--on-night) 16%,transparent)}
+.way .mono{flex:0 0 110px;font-size:.88rem}
+.way code{font:400 clamp(1.06rem,2vw,1.5rem) var(--sans);letter-spacing:-.02em;user-select:all;overflow-wrap:anywhere;margin-right:auto;min-width:0}
+.send{display:flex;flex-wrap:wrap;gap:10px}
+.contact .way .btn{min-height:40px;padding:8px 18px;font-size:.95rem}
+.way .push{margin-left:auto}
+.way .note{flex:1 0 100%;text-align:right}
+.way .note:empty{display:none}
+.contact .btn{color:var(--night-link);border-color:var(--night-link)}
+.contact .btn:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.contact .btn.inv{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.contact .btn.inv:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.contact .w{display:inline-block;overflow:hidden;padding:.14em .05em;margin:-.14em -.05em;vertical-align:bottom}
+.contact .w>span{display:inline-block}
+/* soft light inside the tile: one still pool, one that follows the pointer */
+.glow{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.glow::before,.glow::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--on-night) var(--glow-p),transparent),transparent 66%)}
+.glow::before{width:620px;height:620px;right:-200px;top:-260px}
+.glow::after{width:420px;height:420px;left:var(--mx,12%);top:var(--my,110%);transform:translate(-50%,-50%);opacity:.7;transition:left .6s var(--ease),top .6s var(--ease)}
+/* entrance: applies only once the script adds .anim, plays when the tile scrolls into view */
+.contact.anim{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .8s var(--ease),transform 1.1s var(--ease)}
+.contact.anim.in{opacity:1;transform:none}
+.contact.anim .glow{opacity:0;transition:opacity 1.6s ease .5s}
+.contact.anim.in .glow{opacity:.9}
+.contact.anim .eyebrow{opacity:0;transition:opacity .6s var(--ease) .3s}
+.contact.anim.in .eyebrow{opacity:1}
+.contact.anim .w>span{transform:translateY(112%);transition:transform 1s var(--ease) .35s}
+.contact.anim .w+.w>span{transition-delay:.45s}
+.contact.anim.in .w>span{transform:none}
+.contact.anim .rise{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .9s var(--ease)}
+.contact.anim.in .rise{opacity:1;transform:none}
+.contact.anim.in .rise.r1{transition-delay:.6s}
+.contact.anim.in .rise.r2{transition-delay:.7s}
+.contact.anim.in .rise.r3{transition-delay:.8s}
+.contact.anim.in .rise.r4{transition-delay:.9s}
+.contact.anim.in .rise.r5{transition-delay:1s}
+.contact.anim.in .rise.r6{transition-delay:1.1s}
+footer{margin-top:28px;padding-block:18px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;color:var(--ink-soft);font-size:.75rem}

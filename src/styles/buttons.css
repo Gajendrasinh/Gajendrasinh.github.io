@@ -1,0 +1,6 @@
+/* buttons: blue filled pill for the main action, blue outlined pill for the second */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-radius:980px;padding:10px 22px;font:400 1.06rem/1.18 var(--sans);letter-spacing:-.022em;text-decoration:none;border:1px solid var(--accent);background:transparent;color:var(--link);cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease)}
+.btn:hover{background:var(--accent);color:var(--on-accent)}
+.btn:active{transform:scale(.97)}
+.btn.solid,.btn.inv{background:var(--accent);color:var(--on-accent)}
+.btn.solid:hover,.btn.inv:hover{background:var(--accent-hover);border-color:var(--accent-hover)}

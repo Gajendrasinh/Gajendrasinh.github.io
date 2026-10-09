@@ -1,0 +1,240 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/hero.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "roles",
+    "who",
+    "title",
+    "tagline",
+    "actions",
+    "video",
+    "controls",
+    "clients"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Typed out one after another behind the avatar."
+    },
+    "who": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "section"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "section"
+              },
+              "section": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "link"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "link"
+              },
+              "link": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "resume"
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "message"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "whatsapp"
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text placed in the visitor's WhatsApp message box."
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "still",
+        "width",
+        "height",
+        "stillAlt",
+        "canvasLabel",
+        "videoLabel"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "still": {
+          "type": "string",
+          "minLength": 1
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "stillAlt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canvasLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "videoLabel": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hear",
+        "mute",
+        "play",
+        "pause"
+      ],
+      "properties": {
+        "hear": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "play": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pause": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "clients": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "names"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "names": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

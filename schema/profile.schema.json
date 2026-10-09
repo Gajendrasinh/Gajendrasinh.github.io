@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/profile.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "givenName",
+    "familyName",
+    "initials",
+    "jobTitle",
+    "summary",
+    "location",
+    "countryCode",
+    "email",
+    "phone",
+    "links",
+    "resume",
+    "photo",
+    "availability",
+    "education"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "givenName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "familyName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initials": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jobTitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "countryCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^[^@\\s]+@[^@\\s]+$"
+    },
+    "phone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "display",
+        "whatsapp"
+      ],
+      "properties": {
+        "display": {
+          "type": "string",
+          "minLength": 1
+        },
+        "whatsapp": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Digits only, with country code, as used in wa.me links."
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "display"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "display": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "resume": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "downloadName"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "downloadName": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "alt",
+        "width",
+        "height"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        }
+      }
+    },
+    "availability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "education": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

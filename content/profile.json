@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/profile.schema.json",
+  "name": "Gajendrasinh Zala",
+  "givenName": "Gajendrasinh",
+  "familyName": "Zala",
+  "initials": "GZ",
+  "jobTitle": "Senior Full Stack Developer & AI Engineer",
+  "summary": "Senior full stack engineer, AI engineer and technical lead in Singapore with 12+ years building production platforms for regulators, banks and payment networks in Java, Spring Boot and generative AI.",
+  "location": "Singapore",
+  "countryCode": "SG",
+  "email": "gajendrasinh.zala93@gmail.com",
+  "phone": {
+    "display": "+65 8312 9493",
+    "whatsapp": "6583129493"
+  },
+  "links": {
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/gzala",
+      "display": "linkedin.com/in/gzala"
+    },
+    "github": {
+      "url": "https://github.com/Gajendrasinh",
+      "display": "github.com/Gajendrasinh"
+    }
+  },
+  "resume": {
+    "file": "Gajendrasinh_Zala_Resume.pdf",
+    "downloadName": "Gajendrasinh_Zala_Resume.pdf"
+  },
+  "photo": {
+    "file": "badge-photo.jpg",
+    "alt": "3D character portrait of Gajendrasinh Zala",
+    "width": 250,
+    "height": 298
+  },
+  "availability": "Open to new roles",
+  "education": {
+    "name": "Gujarat Technological University"
+  }
+}

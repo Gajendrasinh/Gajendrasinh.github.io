@@ -1,0 +1,61 @@
+{
+  "$schema": "../schema/services.schema.json",
+  "eyebrow": "Services",
+  "heading": "Mentoring, training *and freelance work.*",
+  "intro": "Alongside my main role I take on a small amount of part-time work. Tell me what you need and I'll say plainly whether I can help.",
+  "items": [
+    {
+      "title": "Mentorship",
+      "text": "One-to-one sessions for developers who want to grow into senior roles.",
+      "points": [
+        "Career direction and moving up to senior",
+        "Java, Spring Boot and system design",
+        "Working well with AI coding tools",
+        "Interview preparation"
+      ]
+    },
+    {
+      "title": "Training",
+      "text": "Practical workshops for teams, built around your own codebase and stack.",
+      "points": [
+        "AI-assisted delivery with Claude Code and Copilot",
+        "RAG and LLM application basics",
+        "Spring Boot microservices and Kafka",
+        "React.js and Angular front ends"
+      ]
+    },
+    {
+      "title": "Resume writing",
+      "text": "A resume and LinkedIn profile that show what you built and what it achieved.",
+      "points": [
+        "Resume review or full rewrite",
+        "Measured results in place of duty lists",
+        "LinkedIn profile review",
+        "Portfolio site feedback"
+      ]
+    },
+    {
+      "title": "Freelance projects",
+      "text": "Part-time builds and technical advice for small, well-defined pieces of work.",
+      "points": [
+        "Full stack web applications and APIs",
+        "RAG chatbots and MCP servers",
+        "Architecture and code reviews",
+        "Proof of concept to production"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": "Ask about a service",
+      "kind": "whatsapp",
+      "message": "Hello Gajendrasinh, I'd like to ask about your services.",
+      "primary": true
+    },
+    {
+      "label": "Email me",
+      "kind": "section",
+      "section": "contact"
+    }
+  ]
+}

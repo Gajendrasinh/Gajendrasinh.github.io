@@ -1,0 +1,321 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/about.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eyebrow",
+    "heading",
+    "lead",
+    "body",
+    "roles",
+    "actions",
+    "facts",
+    "quote",
+    "badge"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string",
+      "minLength": 1
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "lead": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "body": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "items"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "text"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+              }
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "section"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "section"
+              },
+              "section": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "link"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "link"
+              },
+              "link": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "resume"
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "kind",
+              "message"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "const": "whatsapp"
+              },
+              "message": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text placed in the visitor's WhatsApp message box."
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "items"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "value"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "quote": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "badge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "subtitle",
+        "strap",
+        "role",
+        "fields",
+        "back",
+        "pressLabel",
+        "hint"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "strap": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "value"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "back": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "title",
+            "items"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "pressLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "hover",
+            "touch"
+          ],
+          "properties": {
+            "hover": {
+              "type": "string",
+              "minLength": 1
+            },
+            "touch": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/results.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eyebrow",
+    "heading",
+    "intro",
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string",
+      "minLength": 1
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "intro": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "context",
+          "value",
+          "title",
+          "text"
+        ],
+        "properties": {
+          "context": {
+            "type": "string",
+            "minLength": 1
+          },
+          "prefix": {
+            "type": "string"
+          },
+          "value": {
+            "type": "integer",
+            "description": "The number that counts up."
+          },
+          "suffix": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+/* sections */
+section.block{padding-block:var(--sec)}
+section.block#contact{padding-bottom:0}   /* the footer closes the page; no section gap beneath it */
+.eyebrow{display:block;margin-bottom:8px;font-size:1.19rem;font-weight:600;letter-spacing:-.02em;color:var(--ink-soft)}
+h2{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:600;letter-spacing:-.03em;line-height:1.07;margin:0;text-wrap:balance}
+.head{margin-bottom:clamp(28px,4vw,56px)}
+.head p{margin:14px 0 0;max-width:46ch;color:var(--ink-soft);font-size:clamp(1.06rem,1.5vw,1.3rem);line-height:1.38}

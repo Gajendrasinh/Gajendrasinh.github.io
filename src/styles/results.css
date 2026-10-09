@@ -1,0 +1,23 @@
+/* stats: on hover a tile lifts off the page, tilts a little with the pointer, and its neighbours step back */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.stat{position:relative;overflow:hidden;isolation:isolate;background:var(--surface);border-radius:var(--r-lg);padding:30px;display:flex;flex-direction:column;gap:6px;
+  transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(var(--sc,1));
+  transition:transform .6s var(--ease),box-shadow .6s var(--ease),background .45s var(--ease),opacity .45s var(--ease)}
+.stat>*{position:relative;z-index:1}
+.stat::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .5s var(--ease);
+  background:radial-gradient(360px circle at var(--gx,50%) var(--gy,0%),var(--glare),transparent 64%)}
+.stat:hover{--sc:1.025;z-index:2;background:var(--raised);box-shadow:0 0 0 1px var(--line),0 30px 60px -20px var(--shade)}
+.stat:hover::after{opacity:1}
+.stat:active{--sc:.985;transition-duration:.18s}
+.stat b,.stat strong{transition:transform .6s var(--ease)}
+.stat:hover b{transform:translate3d(calc(var(--mx,0)*5px),calc(var(--my,0)*5px),0)}
+.stat:hover strong{transform:translate3d(calc(var(--mx,0)*2px),calc(var(--my,0)*2px),0)}
+.stats:has(.stat:hover) .stat:not(:hover){opacity:.6}
+.stats.anim .stat{opacity:0}
+.stats.anim .stat.in{opacity:1;animation:statin .9s var(--ease) backwards;animation-delay:var(--d,0s)}
+@keyframes statin{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+.stat b{font-size:clamp(2.8rem,5vw,4.5rem);font-weight:600;letter-spacing:-.045em;line-height:1.05;font-variant-numeric:tabular-nums}
+.stat b sup{font-size:.42em;font-weight:600;color:var(--tone);vertical-align:.85em;margin-left:2px;letter-spacing:-.02em}
+.stat strong{font-size:1.19rem;font-weight:600;letter-spacing:-.02em}
+.stat>span{font-size:.95rem;color:var(--ink-soft)}
+.stat .mono{margin-bottom:12px}

@@ -1,0 +1,56 @@
+{
+  "$schema": "../schema/results.schema.json",
+  "eyebrow": "Results",
+  "heading": "Measured *results.*",
+  "intro": "Six outcomes from production work, each measured against the baseline before I started.",
+  "items": [
+    {
+      "context": "MAS · CBDC",
+      "prefix": "~",
+      "value": 99,
+      "suffix": "%",
+      "title": "Security audit compliance",
+      "text": "MAS security audits passed, with OpenID SSO and Active Directory authorisation."
+    },
+    {
+      "context": "MAS · PathFin.ai",
+      "prefix": "~",
+      "value": 60,
+      "suffix": "%",
+      "title": "Faster deployments",
+      "text": "After I rebuilt the backend as serverless AWS."
+    },
+    {
+      "context": "MAS · PathFin.ai",
+      "prefix": "~",
+      "value": 40,
+      "suffix": "%",
+      "title": "Lower infrastructure cost",
+      "text": "From the same move to auto-scaling serverless."
+    },
+    {
+      "context": "MAS · CBDC",
+      "prefix": "~",
+      "value": 70,
+      "suffix": "%",
+      "title": "Less debugging time",
+      "text": "With a private Blockscout explorer for on-chain monitoring."
+    },
+    {
+      "context": "Toshiba · SAP",
+      "prefix": "~",
+      "value": 1,
+      "suffix": "M",
+      "title": "Records processed",
+      "text": "Reliably, through pagination, batching and async processing."
+    },
+    {
+      "context": "Visa · Payments",
+      "prefix": "",
+      "value": 20,
+      "suffix": "%",
+      "title": "Higher API throughput",
+      "text": "At global payment-processing scale."
+    }
+  ]
+}

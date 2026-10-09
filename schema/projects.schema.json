@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/projects.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eyebrow",
+    "heading",
+    "intro",
+    "labels",
+    "note",
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string",
+      "minLength": 1
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "intro": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "need",
+        "built"
+      ],
+      "properties": {
+        "need": {
+          "type": "string",
+          "minLength": 1
+        },
+        "built": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tab",
+          "label",
+          "title",
+          "need",
+          "built",
+          "highlights",
+          "tech",
+          "metricsLabel",
+          "metrics"
+        ],
+        "properties": {
+          "tab": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Short name shown on the collapsed panel."
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "need": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+          },
+          "built": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+          },
+          "highlights": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "tech": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "metricsLabel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metrics": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "label"
+              ],
+              "properties": {
+                "value": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "link": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "url"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https://"
+              }
+            }
+          },
+          "open": {
+            "type": "boolean",
+            "description": "Exactly one project starts open."
+          }
+        }
+      }
+    }
+  }
+}

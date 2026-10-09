@@ -1,0 +1,131 @@
+{
+  "$schema": "../schema/experience.schema.json",
+  "eyebrow": "Experience",
+  "heading": "Twelve years *in production.*",
+  "intro": "Six roles, newest first. Each year marks when the role began.",
+  "items": [
+    {
+      "year": "2025",
+      "sector": "Regulator",
+      "period": "Nov 2025 – present",
+      "title": "Senior Full Stack Developer & AI Engineer",
+      "organisation": "Monetary Authority of Singapore",
+      "detail": "via Manpower Staffing Services",
+      "text": "Architected [PathFin.ai](https://pathfin.ai/), a financial AI platform with a RAG chatbot in production, and a two-portal CBDC issuance platform on Hyperledger Besu that passed MAS security audits.",
+      "tags": [
+        {
+          "label": "~99% audit compliance",
+          "highlight": true
+        },
+        {
+          "label": "RAG in production"
+        },
+        {
+          "label": "Serverless AWS"
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "sector": "Retail · POS",
+      "period": "Mar 2024 – Nov 2025",
+      "title": "Senior Full Stack Developer",
+      "organisation": "Toshiba Global Commerce",
+      "detail": "via DNA Infotech",
+      "text": "Built real-time POS transaction microservices on Java, Quarkus, Spring Boot and Kafka, and led the SAP-to-Fuel/POS integration platform as Technical Lead.",
+      "tags": [
+        {
+          "label": "Technical Lead",
+          "highlight": true
+        },
+        {
+          "label": "~1M records"
+        },
+        {
+          "label": "25% lower frontend latency"
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "sector": "Banking",
+      "period": "Sep 2023 – Mar 2024",
+      "title": "Senior Full Stack Developer",
+      "organisation": "OCBC Bank",
+      "detail": "Singapore",
+      "text": "Delivered the Large Corporate Loan Approval platform end to end: two Spring Boot microservices, two React micro-frontends and Kafka integration with downstream banking systems.",
+      "tags": [
+        {
+          "label": "Micro-frontends"
+        },
+        {
+          "label": "Kafka"
+        },
+        {
+          "label": "6-month delivery"
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "sector": "Payments",
+      "period": "Oct 2022 – Aug 2023",
+      "title": "Senior Software Engineer",
+      "organisation": "Visa Worldwide",
+      "detail": "via NTT Singapore",
+      "text": "Designed microservices and GraphQL APIs on Spring Boot and AWS, automated releases across Jenkins and Azure DevOps, and added AI-assisted analytics to operational monitoring.",
+      "tags": [
+        {
+          "label": "20% API throughput",
+          "highlight": true
+        },
+        {
+          "label": "GraphQL"
+        },
+        {
+          "label": "AWS"
+        }
+      ]
+    },
+    {
+      "year": "2018",
+      "sector": "Logistics",
+      "period": "Jun 2018 – Oct 2022",
+      "title": "Software Engineer",
+      "organisation": "DHL Information Services",
+      "detail": "Asia-Pacific (Malaysia)",
+      "text": "Built Kafka, AWS and Redis microservices for anomaly detection in reconciliation data, led architecture upgrades with Spring Batch, and supported the move of batch jobs to AWS.",
+      "tags": [
+        {
+          "label": "Kafka"
+        },
+        {
+          "label": "Spring Batch"
+        },
+        {
+          "label": "Cloud migration"
+        }
+      ]
+    },
+    {
+      "year": "2014",
+      "sector": "Product engineering",
+      "period": "2014 – 2018",
+      "title": "Software Engineer / Java Developer",
+      "organisation": "Plumslice Lab & Lumium Innovation",
+      "detail": "India",
+      "text": "Delivered core Java modules, designed and optimised SQL schemas and queries, and supported production applications.",
+      "tags": [
+        {
+          "label": "Core Java"
+        },
+        {
+          "label": "SQL"
+        },
+        {
+          "label": "Maven"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "../schema/contact.schema.json",
+  "eyebrow": "Contact",
+  "heading": [
+    {
+      "text": "Let's"
+    },
+    {
+      "text": "talk.",
+      "muted": true
+    }
+  ],
+  "intro": "I'm open to permanent roles as a full stack engineer, AI engineer or technical lead, and to part-time mentoring, training and freelance work. I'm based in Singapore on an Employment Pass, and email or WhatsApp reaches me fastest.",
+  "rows": [
+    {
+      "kind": "email",
+      "label": "Email",
+      "send": "Send email",
+      "copy": "Copy email",
+      "subject": "Hello Gajendrasinh Zala"
+    },
+    {
+      "kind": "whatsapp",
+      "label": "WhatsApp",
+      "action": "WhatsApp"
+    },
+    {
+      "kind": "link",
+      "link": "linkedin",
+      "label": "LinkedIn",
+      "action": "LinkedIn"
+    },
+    {
+      "kind": "link",
+      "link": "github",
+      "label": "GitHub",
+      "action": "GitHub"
+    },
+    {
+      "kind": "resume",
+      "label": "Resume",
+      "action": "Download resume"
+    }
+  ],
+  "messages": {
+    "copied": "Copied",
+    "selected": "Selected. Copy it now",
+    "preparing": "Preparing the file",
+    "saved": "Saved",
+    "saveFailed": "Could not save here. Email me and I will send it."
+  }
+}

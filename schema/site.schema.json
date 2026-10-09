@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "content/site.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "url",
+    "socialImage",
+    "language",
+    "locale",
+    "shortTitle",
+    "title",
+    "description",
+    "themeColor",
+    "fonts",
+    "navigation",
+    "sections",
+    "footer"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "description": "Final public address, e.g. https://example.com. Leave empty until known; canonical link, og:url and sitemap.xml are written only when it is set."
+    },
+    "socialImage": {
+      "type": "string",
+      "description": "File in public/ used for link previews (1200x630). Optional."
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "shortTitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Search result description, at most about 165 characters."
+    },
+    "themeColor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "light",
+        "dark"
+      ],
+      "properties": {
+        "light": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dark": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "fonts": {
+      "type": "string",
+      "minLength": 1
+    },
+    "navigation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "menu",
+        "items"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "menu": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "open",
+            "close"
+          ],
+          "properties": {
+            "open": {
+              "type": "string",
+              "minLength": 1
+            },
+            "close": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "section"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "section": {
+                "type": "string",
+                "minLength": 1
+              },
+              "primary": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Section ids in page order. Each needs a template in src/templates/sections."
+    },
+    "footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "left",
+        "right"
+      ],
+      "properties": {
+        "left": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+        },
+        "right": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Text. May use {name}, {email}, {location}, {github}, {linkedin}; *grey phrase*; __gradient__; [label](url)."
+        }
+      }
+    }
+  }
+}

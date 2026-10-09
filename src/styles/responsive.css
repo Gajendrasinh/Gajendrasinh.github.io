@@ -1,0 +1,90 @@
+@media (pointer:coarse){
+  .chip{min-height:44px}
+  .verify{min-height:44px;display:inline-flex;align-items:center}
+  .vbtn{height:44px}.vbtn.round{width:44px}
+}
+@media (min-width:1400px){
+  .tile{aspect-ratio:4/3;padding:13px 15px;border-radius:22px}
+  .tile .l{font-size:.8rem}
+  .tile .n{font-size:.7rem}
+}
+@media (max-width:1180px){
+  .acc{flex-direction:column;min-height:0}
+  .panel,.panel.open{flex:none}
+  .tab{position:static;flex-direction:row;width:100%;padding:16px 16px 16px 24px}
+  .tab .vt{writing-mode:horizontal-tb;transform:none;white-space:normal}
+  .body{min-width:0;padding:28px 24px}
+}
+@media (max-width:1000px){
+  .body{grid-template-columns:1fr}
+  .ptable{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .about-badge{margin-top:0}
+  .hook{border-radius:9px}
+  .strap{height:84px}
+  .detail{position:static;min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;text-align:left;gap:18px;padding:22px}
+  .plate{width:76px;height:76px;border-radius:var(--r-md)}
+  .plate img{width:46px;height:46px}
+  .detail .big{flex:none;width:64px;height:64px;font-size:1.6rem;border-radius:16px}
+  .detail>div:not(.big):not(.plate){flex:1 1 200px;min-width:0}
+  .detail h3{margin:0}
+}
+@media (max-width:820px){
+  .top .wrap{position:relative;height:48px}
+  .hero{margin-top:-49px;padding-top:49px}
+  .menu-btn{display:grid}
+  .pill-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:10px var(--gutter) 26px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 30px 40px -30px var(--shade)}
+  .top.open{background:var(--bg)}
+  .top.open .pill-nav{display:flex;animation:menuin .3s var(--ease)}
+  .pill-nav a,.pill-nav a.cta{padding:11px 0;border-radius:0;background:none;font-size:1.5rem;font-weight:600;letter-spacing:-.025em;color:var(--ink);border-bottom:1px solid var(--line)}
+  .pill-nav a.cta{color:var(--link)}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:20px;padding-bottom:44px}
+  .hero-text{order:1;max-width:none;padding-top:26px}
+  .stage{order:2;position:relative;inset:auto;height:480px}
+  .vctl{top:6px}
+  .hero-cta{order:3;flex-direction:row;flex-wrap:wrap;justify-self:start;align-items:center}
+  .ghost{top:70px}
+  .certs{grid-template-columns:1fr}
+  .certs>div:first-child{position:static}
+  .clist li{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:16px 4px}
+  .clist li>.mono{grid-column:1/-1}
+  .grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+  .tile{border-radius:12px;padding:6px 7px}
+  .tile .l{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .body ul{grid-template-columns:1fr}
+  .tl::before{left:6px}
+  .tl-item{grid-template-columns:1fr;gap:10px;padding-left:30px}
+  .tl-item::after{left:6px;top:28px}
+  .tl-fill{left:6px}
+  .tl.anim .tl-item::before{left:6px;top:28px}
+  .tl.anim .card,.tl.anim .tl-item:nth-child(even) .card{--dx:0px;--dy:30px}
+  .tl-item .year,.tl-item:nth-child(odd) .year,.tl-item:nth-child(even) .year{order:0;text-align:left}
+  .card{padding:24px}
+  .stats{grid-template-columns:1fr}
+  .way .mono{flex:1 0 100%}
+  .way code{flex:1 0 100%;margin:0}
+  .way .note{text-align:left}
+  .way .push{margin-left:0}
+  .roles li{grid-template-columns:1fr}
+  .proof li{font-size:1.06rem}
+}
+@media (min-width:560px) and (max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:560px) and (max-width:820px){
+  .grid{grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}
+  .tile{padding:8px 9px;border-radius:14px}
+  .tile .l{position:static;width:auto;height:auto;clip-path:none}
+  .tile .s{font-size:1.35rem}
+}
+@media (max-width:480px){
+  .contact{padding:32px 22px}
+  .way code{font-size:clamp(.95rem,4.4vw,1.2rem)}
+  .tile .n{font-size:.56rem}
+  .stat{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hang{animation:none}
+  .ghost{animation:none}
+  .ghost .caret{display:none}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}

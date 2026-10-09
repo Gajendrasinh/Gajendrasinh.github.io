@@ -1,0 +1,67 @@
+{
+  "$schema": "../schema/site.schema.json",
+  "url": "https://gajendrasinh.github.io",
+  "socialImage": "",
+  "language": "en",
+  "locale": "en_SG",
+  "shortTitle": "Gajendrasinh Zala",
+  "title": "Gajendrasinh Zala | Full Stack & AI Engineer in Singapore",
+  "description": "Gajendrasinh Zala is a Senior Full Stack and AI Engineer in Singapore, open to new roles. 12+ years of Java, Spring Boot and GenAI work for banks and regulators.",
+  "themeColor": {
+    "light": "#ffffff",
+    "dark": "#000000"
+  },
+  "fonts": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
+  "navigation": {
+    "label": "Sections",
+    "menu": {
+      "open": "Menu",
+      "close": "Close"
+    },
+    "items": [
+      {
+        "label": "About",
+        "section": "about"
+      },
+      {
+        "label": "Work",
+        "section": "work"
+      },
+      {
+        "label": "Results",
+        "section": "results"
+      },
+      {
+        "label": "Experience",
+        "section": "experience"
+      },
+      {
+        "label": "Skills",
+        "section": "skills"
+      },
+      {
+        "label": "Services",
+        "section": "services"
+      },
+      {
+        "label": "Contact",
+        "section": "contact",
+        "primary": true
+      }
+    ]
+  },
+  "sections": [
+    "about",
+    "work",
+    "results",
+    "experience",
+    "skills",
+    "certifications",
+    "services",
+    "contact"
+  ],
+  "footer": {
+    "left": "© 2026 __{name}__",
+    "right": "{email} · {location}"
+  }
+}

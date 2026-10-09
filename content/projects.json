@@ -1,0 +1,243 @@
+{
+  "$schema": "../schema/projects.schema.json",
+  "eyebrow": "Work",
+  "heading": "Things I've *built.*",
+  "intro": "Five production platforms for a regulator, a bank, retail and payments, and one open-source MCP server. Each shows the need, what I built and the result.",
+  "labels": {
+    "need": "The need.",
+    "built": "What I built."
+  },
+  "note": "Client code is confidential. The MCP server is public on [GitHub]({github}), and I'm glad to walk through the architecture of the rest in an interview.",
+  "items": [
+    {
+      "tab": "PathFin.ai",
+      "label": "Monetary Authority of Singapore · Generative AI",
+      "title": "PathFin.ai",
+      "need": "Signed-in users of a financial AI platform needed secure, relevant answers to financial knowledge questions.",
+      "built": "I architected the platform end to end: a RAG chatbot on OpenAI embeddings and a pgvector store, a React front end, and a serverless AWS backend in Python and Django.",
+      "highlights": [
+        "RAG chatbot behind JWT and OTP sign-in",
+        "Backend rebuilt as auto-scaling serverless",
+        "Google Sheets sync cut update time ~80%",
+        "Docker and Jenkins CI/CD"
+      ],
+      "tech": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Python / Django",
+        "AWS Lambda",
+        "DynamoDB",
+        "OpenAI",
+        "pgvector"
+      ],
+      "metricsLabel": "Measured results",
+      "metrics": [
+        {
+          "value": "~60%",
+          "label": "faster deployments"
+        },
+        {
+          "value": "~40%",
+          "label": "lower infrastructure cost"
+        },
+        {
+          "value": "80%+",
+          "label": "automated test coverage"
+        }
+      ],
+      "link": {
+        "label": "Visit pathfin.ai",
+        "url": "https://pathfin.ai/"
+      },
+      "open": true
+    },
+    {
+      "tab": "CBDC Platform",
+      "label": "Monetary Authority of Singapore · Digital currency",
+      "title": "CBDC Platform",
+      "need": "Financial institutions had to request a central bank digital currency and MAS operations had to issue it, with every step controlled and traceable.",
+      "built": "Two separate portals on React and NestJS, upgradeable ERC-20 smart contracts in Solidity, and dedicated Web3 nodes on a private Hyperledger Besu network, proven on simulated transactions.",
+      "highlights": [
+        "Mint and burn with zero-downtime upgrades",
+        "OpenID SSO and Active Directory roles",
+        "Maker–checker controls",
+        "Private Blockscout explorer for audit trails"
+      ],
+      "tech": [
+        "React",
+        "Next.js",
+        "NestJS",
+        "Solidity",
+        "OpenZeppelin",
+        "Hyperledger Besu",
+        "PostgreSQL",
+        "TypeORM",
+        "OpenShift",
+        "Grafana"
+      ],
+      "metricsLabel": "Measured results",
+      "metrics": [
+        {
+          "value": "~99%",
+          "label": "MAS security audit compliance"
+        },
+        {
+          "value": "~70%",
+          "label": "less transaction debugging time"
+        },
+        {
+          "value": "Zero",
+          "label": "downtime on contract upgrades"
+        }
+      ]
+    },
+    {
+      "tab": "SAP Integration",
+      "label": "Toshiba Global Commerce · Technical Lead",
+      "title": "SAP Integration & Fuel Management",
+      "need": "Fuel and point-of-sale systems had to exchange data with SAP in both directions, reliably and at volume.",
+      "built": "As Technical Lead I took it from proof of concept to production: six Java and Spring Boot microservices for sync, XML processing and transactions, plus a React operations portal.",
+      "highlights": [
+        "Two-way SAP and Fuel/POS sync",
+        "Pagination, batching and async processing",
+        "Operations portal for workflow status",
+        "Retries, validation and logging throughout"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "XML",
+        "REST APIs",
+        "React"
+      ],
+      "metricsLabel": "Scope",
+      "metrics": [
+        {
+          "value": "6",
+          "label": "Java / Spring Boot microservices"
+        },
+        {
+          "value": "~1M",
+          "label": "records processed reliably"
+        },
+        {
+          "value": "POC → prod",
+          "label": "full lifecycle ownership"
+        }
+      ]
+    },
+    {
+      "tab": "Corporate Loan Approval",
+      "label": "OCBC Bank · Banking",
+      "title": "Corporate Loan Approval",
+      "need": "OCBC needed an enterprise platform to run approvals for large corporate loans.",
+      "built": "I owned it from requirements analysis to production rollout in six months: two Spring Boot microservices for the approval logic, two independently deployable React micro-frontends, and Kafka events to downstream banking systems.",
+      "highlights": [
+        "Loan approval business logic",
+        "Micro-frontends released independently",
+        "Kafka events to banking systems",
+        "Unit and integration test suites"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Spring MVC",
+        "JPA / Hibernate",
+        "React",
+        "Kafka",
+        "Docker"
+      ],
+      "metricsLabel": "Scope",
+      "metrics": [
+        {
+          "value": "2",
+          "label": "Spring Boot microservices"
+        },
+        {
+          "value": "2",
+          "label": "React micro-frontends"
+        },
+        {
+          "value": "6 mo",
+          "label": "from requirements to production"
+        }
+      ]
+    },
+    {
+      "tab": "Payments Platform",
+      "label": "Visa Worldwide · Payments",
+      "title": "Payments Platform",
+      "need": "A global payment platform has to stay stable at peak load in every region.",
+      "built": "I designed microservices and GraphQL APIs on Spring Boot and AWS, automated releases across Jenkins and Azure DevOps, and added AI-assisted analytics to operational monitoring.",
+      "highlights": [
+        "GraphQL API design",
+        "Automated releases, fewer rollbacks",
+        "Earlier anomaly detection in traffic",
+        "API contracts aligned across regions"
+      ],
+      "tech": [
+        "Angular",
+        "React",
+        "Spring Boot",
+        "GraphQL",
+        "AWS",
+        "Maven",
+        "Jenkins"
+      ],
+      "metricsLabel": "Measured results",
+      "metrics": [
+        {
+          "value": "20%",
+          "label": "higher API throughput"
+        },
+        {
+          "value": "Global",
+          "label": "payment-processing scale"
+        }
+      ]
+    },
+    {
+      "tab": "MCP Server",
+      "label": "Open source · AI agents",
+      "title": "Payment Intelligence MCP Server",
+      "need": "An AI agent investigating a payment needs access to payment data that is permissioned and audited.",
+      "built": "An MCP server in Python that gives agents four tools: payment lookup, customer profile, transaction search and rule-based risk scoring. It runs on sample data, so anyone can try it.",
+      "highlights": [
+        "Role-based access with four roles",
+        "JSON audit logs that mask sensitive fields",
+        "Decline-code policy as an MCP resource",
+        "Runs over stdio or SSE, in Docker"
+      ],
+      "tech": [
+        "Python",
+        "FastMCP",
+        "Pydantic v2",
+        "pytest",
+        "Ruff",
+        "mypy",
+        "Docker"
+      ],
+      "metricsLabel": "Scope",
+      "metrics": [
+        {
+          "value": "4",
+          "label": "tools exposed to AI agents"
+        },
+        {
+          "value": "50",
+          "label": "automated tests"
+        },
+        {
+          "value": "Public",
+          "label": "code on GitHub"
+        }
+      ],
+      "link": {
+        "label": "View the code on GitHub",
+        "url": "https://github.com/Gajendrasinh/enterprise-payment-intelligence-mcp"
+      }
+    }
+  ]
+}

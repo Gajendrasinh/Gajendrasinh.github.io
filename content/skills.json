@@ -1,0 +1,333 @@
+{
+  "$schema": "../schema/skills.schema.json",
+  "eyebrow": "Skills",
+  "heading": "The periodic table *of my stack.*",
+  "intro": {
+    "hover": "42 technologies I work with, in six families. Hover a tile to see where I used it, or pick a family to light it up.",
+    "touch": "42 technologies I work with, in six families. Tap a tile to see where I used it, or pick a family to light it up."
+  },
+  "filterLabel": "Filter by family",
+  "detailMeta": "{family} · No. {number}",
+  "logoAlt": "{name} logo",
+  "families": [
+    {
+      "id": "languages",
+      "name": "Languages"
+    },
+    {
+      "id": "backend",
+      "name": "Backend"
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend"
+    },
+    {
+      "id": "ai",
+      "name": "AI"
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud & DevOps"
+    },
+    {
+      "id": "data",
+      "name": "Data & Messaging"
+    }
+  ],
+  "items": [
+    {
+      "symbol": "Jv",
+      "name": "Java",
+      "family": "languages",
+      "text": "Java 8–20 and J2EE across Toshiba, OCBC, Visa and DHL.",
+      "logo": "java"
+    },
+    {
+      "symbol": "Ts",
+      "name": "TypeScript",
+      "family": "languages",
+      "text": "The Vite UI for PathFin.ai and the NestJS services behind the CBDC platform.",
+      "logo": "typescript"
+    },
+    {
+      "symbol": "Js",
+      "name": "JavaScript",
+      "family": "languages",
+      "text": "ES6 across React, Angular and Node.js work.",
+      "logo": "javascript"
+    },
+    {
+      "symbol": "Py",
+      "name": "Python",
+      "family": "languages",
+      "text": "Django backend for PathFin.ai, plus Pandas and NumPy for analytics.",
+      "logo": "python"
+    },
+    {
+      "symbol": "Sq",
+      "name": "SQL",
+      "family": "languages",
+      "text": "Schema design and query optimisation on PostgreSQL, MySQL and Oracle.",
+      "logo": "sql"
+    },
+    {
+      "symbol": "So",
+      "name": "Solidity",
+      "family": "languages",
+      "text": "Upgradeable ERC-20 contracts using OpenZeppelin’s UUPS proxy for the CBDC platform.",
+      "logo": "solidity"
+    },
+    {
+      "symbol": "Sb",
+      "name": "Spring Boot",
+      "family": "backend",
+      "text": "Microservices at Toshiba, OCBC, Visa and DHL.",
+      "logo": "springboot"
+    },
+    {
+      "symbol": "Ss",
+      "name": "Spring Security",
+      "family": "backend",
+      "text": "Part of my core Java/J2EE stack for securing services.",
+      "logo": "springsecurity"
+    },
+    {
+      "symbol": "Bt",
+      "name": "Spring Batch",
+      "family": "backend",
+      "text": "Architecture upgrades for peak logistics volume at DHL.",
+      "logo": "spring"
+    },
+    {
+      "symbol": "Hb",
+      "name": "JPA / Hibernate",
+      "family": "backend",
+      "text": "Loan approval services at OCBC and reconciliation at DHL.",
+      "logo": "hibernate"
+    },
+    {
+      "symbol": "Qk",
+      "name": "Quarkus",
+      "family": "backend",
+      "text": "Real-time POS transaction microservices at Toshiba.",
+      "logo": "quarkus"
+    },
+    {
+      "symbol": "Ns",
+      "name": "NestJS",
+      "family": "backend",
+      "text": "Microservice backends and REST APIs for the CBDC platform.",
+      "logo": "nestjs"
+    },
+    {
+      "symbol": "No",
+      "name": "Node.js",
+      "family": "backend",
+      "text": "Node.js and Express services with REST API design.",
+      "logo": "nodejs"
+    },
+    {
+      "symbol": "Dj",
+      "name": "Django",
+      "family": "backend",
+      "text": "The Python service layer of PathFin.ai.",
+      "logo": "django"
+    },
+    {
+      "symbol": "Re",
+      "name": "React",
+      "family": "frontend",
+      "text": "Portals, dashboards and micro-frontends at MAS, Toshiba, OCBC and Visa.",
+      "logo": "react"
+    },
+    {
+      "symbol": "Nx",
+      "name": "Next.js",
+      "family": "frontend",
+      "text": "SSR and SSG frontends for the CBDC portals.",
+      "logo": "nextjs"
+    },
+    {
+      "symbol": "Ng",
+      "name": "Angular",
+      "family": "frontend",
+      "text": "Payment platform UI at Visa.",
+      "logo": "angular"
+    },
+    {
+      "symbol": "Rx",
+      "name": "Redux",
+      "family": "frontend",
+      "text": "Redux and Redux Toolkit alongside Hooks and the Context API.",
+      "logo": "redux"
+    },
+    {
+      "symbol": "Gq",
+      "name": "GraphQL",
+      "family": "frontend",
+      "text": "GraphQL APIs at Visa and React/GraphQL dashboards at Toshiba.",
+      "logo": "graphql"
+    },
+    {
+      "symbol": "Tw",
+      "name": "Tailwind CSS",
+      "family": "frontend",
+      "text": "The mobile-responsive PathFin.ai interface.",
+      "logo": "tailwindcss"
+    },
+    {
+      "symbol": "Mf",
+      "name": "Micro-frontends",
+      "family": "frontend",
+      "text": "Two independently deployable React apps at OCBC.",
+      "logo": "microfrontends"
+    },
+    {
+      "symbol": "Oa",
+      "name": "OpenAI API",
+      "family": "ai",
+      "text": "Embeddings and chat for the PathFin.ai RAG chatbot."
+    },
+    {
+      "symbol": "Rg",
+      "name": "RAG",
+      "family": "ai",
+      "text": "A production chatbot answering authenticated financial knowledge queries.",
+      "logo": "rag"
+    },
+    {
+      "symbol": "Pv",
+      "name": "pgvector",
+      "family": "ai",
+      "text": "The vector store behind PathFin.ai retrieval.",
+      "logo": "postgresql"
+    },
+    {
+      "symbol": "An",
+      "name": "Anthropic API",
+      "family": "ai",
+      "text": "Hands-on experience alongside the OpenAI API.",
+      "logo": "anthropic"
+    },
+    {
+      "symbol": "Lg",
+      "name": "LangChain / LangGraph",
+      "family": "ai",
+      "text": "Hands-on LLM orchestration.",
+      "logo": "langchain"
+    },
+    {
+      "symbol": "Mc",
+      "name": "MCP",
+      "family": "ai",
+      "text": "An open-source MCP server that gives AI agents permissioned access to payment data.",
+      "logo": "mcp"
+    },
+    {
+      "symbol": "Cc",
+      "name": "Claude Code",
+      "family": "ai",
+      "text": "Used daily for code generation, code review and test authoring.",
+      "logo": "claude"
+    },
+    {
+      "symbol": "Cp",
+      "name": "GitHub Copilot",
+      "family": "ai",
+      "text": "Daily AI-assisted delivery across two concurrent MAS projects.",
+      "logo": "githubcopilot"
+    },
+    {
+      "symbol": "Aw",
+      "name": "AWS",
+      "family": "cloud",
+      "text": "Lambda, ECS/EKS, EC2, S3, RDS and DynamoDB.",
+      "logo": "amazonwebservices"
+    },
+    {
+      "symbol": "Sl",
+      "name": "Serverless",
+      "family": "cloud",
+      "text": "Serverless Framework and CloudFormation. Cut PathFin.ai infrastructure cost by about 40%.",
+      "logo": "serverless"
+    },
+    {
+      "symbol": "K8",
+      "name": "Kubernetes",
+      "family": "cloud",
+      "text": "Kubernetes and Amazon EKS deployments.",
+      "logo": "kubernetes"
+    },
+    {
+      "symbol": "Dk",
+      "name": "Docker",
+      "family": "cloud",
+      "text": "Containerised services at MAS, Toshiba and OCBC.",
+      "logo": "docker"
+    },
+    {
+      "symbol": "Os",
+      "name": "OpenShift",
+      "family": "cloud",
+      "text": "CI/CD pipelines at Toshiba and CBDC services at MAS.",
+      "logo": "openshift"
+    },
+    {
+      "symbol": "Jk",
+      "name": "Jenkins",
+      "family": "cloud",
+      "text": "CI/CD at MAS, Toshiba and Visa. Red Hat certified.",
+      "logo": "jenkins"
+    },
+    {
+      "symbol": "Az",
+      "name": "Azure DevOps",
+      "family": "cloud",
+      "text": "Release automation at Visa and Toshiba.",
+      "logo": "azuredevops"
+    },
+    {
+      "symbol": "Kf",
+      "name": "Kafka",
+      "family": "data",
+      "text": "POS transactions at Toshiba, loan events at OCBC and reconciliation at DHL.",
+      "logo": "apachekafka"
+    },
+    {
+      "symbol": "Pg",
+      "name": "PostgreSQL",
+      "family": "data",
+      "text": "Relational schema with TypeORM for the CBDC platform, and pgvector for RAG.",
+      "logo": "postgresql"
+    },
+    {
+      "symbol": "Rd",
+      "name": "Redis",
+      "family": "data",
+      "text": "Caching on high-traffic POS endpoints at Toshiba.",
+      "logo": "redis"
+    },
+    {
+      "symbol": "Mg",
+      "name": "MongoDB",
+      "family": "data",
+      "text": "Document storage in my data toolkit.",
+      "logo": "mongodb"
+    },
+    {
+      "symbol": "Dy",
+      "name": "DynamoDB",
+      "family": "data",
+      "text": "The serverless data layer of PathFin.ai.",
+      "logo": "dynamodb"
+    },
+    {
+      "symbol": "Or",
+      "name": "Oracle",
+      "family": "data",
+      "text": "Enterprise relational databases.",
+      "logo": "oracle"
+    }
+  ]
+}

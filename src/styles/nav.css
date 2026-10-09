@@ -1,0 +1,18 @@
+/* nav: full-width translucent bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bar);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:52px}
+.brand{font-weight:600;font-size:1.19rem;letter-spacing:-.022em;white-space:nowrap;
+  color:var(--b1);background:linear-gradient(90deg,var(--b1),var(--b2) 38%,var(--b3) 70%,var(--b4));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.brand{-webkit-text-fill-color:currentColor}}
+.pill-nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,34px)}
+.pill-nav a{text-decoration:none;font-size:.8rem;letter-spacing:-.01em;white-space:nowrap;color:var(--ink-soft);transition:color .3s var(--ease)}
+.pill-nav a:hover,.pill-nav a.on{color:var(--ink)}
+.pill-nav a.cta{padding:5px 12px;border-radius:980px;background:var(--accent);color:var(--on-accent);transition:background .3s var(--ease)}
+.pill-nav a.cta:hover{background:var(--accent-hover)}
+.menu-btn{all:unset;box-sizing:border-box;display:none;width:44px;height:44px;margin-right:-12px;place-items:center;cursor:pointer;color:var(--ink);border-radius:50%}
+.menu-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.bars{position:relative;width:18px;height:9px}
+.bars::before,.bars::after{content:"";position:absolute;left:0;right:0;height:1.5px;border-radius:2px;background:currentColor;transition:transform .35s var(--ease),top .35s var(--ease)}
+.bars::before{top:0}.bars::after{top:7.5px}
+.top.open .bars::before{top:3.75px;transform:rotate(45deg)}
+.top.open .bars::after{top:3.75px;transform:rotate(-45deg)}

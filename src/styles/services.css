@@ -1,0 +1,16 @@
+/* services: part-time offers, one tile each. Four across, then two, then one. */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.svc{background:var(--surface);border-radius:var(--r-lg);padding:30px;display:flex;flex-direction:column;gap:10px}
+.svc h3{margin:0;font-size:1.5rem;font-weight:600;letter-spacing:-.022em;line-height:1.15}
+.svc p{margin:0;color:var(--ink-soft)}
+.svc ul{list-style:none;margin:10px 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;gap:9px;font-size:.95rem}
+.svc li{position:relative;padding-left:16px}
+.svc li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.services-actions{margin-top:28px}
+.services.anim .svc{opacity:0}
+.services.anim .svc.in{opacity:1;animation:statin .9s var(--ease) backwards;animation-delay:var(--d,0s)}
+@media (max-width:1180px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .services{grid-template-columns:1fr}
+  .svc{padding:24px}
+}
