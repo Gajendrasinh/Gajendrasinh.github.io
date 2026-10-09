@@ -138,7 +138,7 @@
       "symbol": "Re",
       "name": "React",
       "family": "frontend",
-      "text": "Portals, dashboards and micro-frontends at MAS, Toshiba, OCBC and Visa.",
+      "text": "Portals, dashboards and micro-frontends at Avanade, Toshiba, OCBC and Visa.",
       "logo": "react"
     },
     {
@@ -235,7 +235,7 @@
       "symbol": "Cp",
       "name": "GitHub Copilot",
       "family": "ai",
-      "text": "Daily AI-assisted delivery across two concurrent MAS projects.",
+      "text": "Daily AI-assisted delivery across two concurrent projects.",
       "logo": "githubcopilot"
     },
     {
@@ -263,21 +263,21 @@
       "symbol": "Dk",
       "name": "Docker",
       "family": "cloud",
-      "text": "Containerised services at MAS, Toshiba and OCBC.",
+      "text": "Containerised services at Avanade, Toshiba and OCBC.",
       "logo": "docker"
     },
     {
       "symbol": "Os",
       "name": "OpenShift",
       "family": "cloud",
-      "text": "CI/CD pipelines at Toshiba and CBDC services at MAS.",
+      "text": "CI/CD pipelines at Toshiba and CBDC services at Avanade.",
       "logo": "openshift"
     },
     {
       "symbol": "Jk",
       "name": "Jenkins",
       "family": "cloud",
-      "text": "CI/CD at MAS, Toshiba and Visa. Red Hat certified.",
+      "text": "CI/CD at Avanade, Toshiba and Visa. Red Hat certified.",
       "logo": "jenkins"
     },
     {

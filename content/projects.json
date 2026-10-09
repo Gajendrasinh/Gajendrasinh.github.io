@@ -11,7 +11,7 @@
   "items": [
     {
       "tab": "PathFin.ai",
-      "label": "Monetary Authority of Singapore · Generative AI",
+      "label": "Avanade Asia · Generative AI",
       "title": "PathFin.ai",
       "need": "Signed-in users of a financial AI platform needed secure, relevant answers to financial knowledge questions.",
       "built": "I architected the platform end to end: a RAG chatbot on OpenAI embeddings and a pgvector store, a React front end, and a serverless AWS backend in Python and Django.",
@@ -55,9 +55,9 @@
     },
     {
       "tab": "CBDC Platform",
-      "label": "Monetary Authority of Singapore · Digital currency",
+      "label": "Avanade Asia · Digital currency",
       "title": "CBDC Platform",
-      "need": "Financial institutions had to request a central bank digital currency and MAS operations had to issue it, with every step controlled and traceable.",
+      "need": "Financial institutions had to request a central bank digital currency and the central bank's operations team had to issue it, with every step controlled and traceable.",
       "built": "Two separate portals on React and NestJS, upgradeable ERC-20 smart contracts in Solidity, and dedicated Web3 nodes on a private Hyperledger Besu network, proven on simulated transactions.",
       "highlights": [
         "Mint and burn with zero-downtime upgrades",
@@ -81,7 +81,7 @@
       "metrics": [
         {
           "value": "~99%",
-          "label": "MAS security audit compliance"
+          "label": "security audit compliance"
         },
         {
           "value": "~70%",

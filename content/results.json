@@ -5,15 +5,15 @@
   "intro": "Six outcomes from production work, each measured against the baseline before I started.",
   "items": [
     {
-      "context": "MAS · CBDC",
+      "context": "Avanade · CBDC",
       "prefix": "~",
       "value": 99,
       "suffix": "%",
       "title": "Security audit compliance",
-      "text": "MAS security audits passed, with OpenID SSO and Active Directory authorisation."
+      "text": "Security audits passed, with OpenID SSO and Active Directory authorisation."
     },
     {
-      "context": "MAS · PathFin.ai",
+      "context": "Avanade · PathFin.ai",
       "prefix": "~",
       "value": 60,
       "suffix": "%",
@@ -21,7 +21,7 @@
       "text": "After I rebuilt the backend as serverless AWS."
     },
     {
-      "context": "MAS · PathFin.ai",
+      "context": "Avanade · PathFin.ai",
       "prefix": "~",
       "value": 40,
       "suffix": "%",
@@ -29,7 +29,7 @@
       "text": "From the same move to auto-scaling serverless."
     },
     {
-      "context": "MAS · CBDC",
+      "context": "Avanade · CBDC",
       "prefix": "~",
       "value": 70,
       "suffix": "%",
