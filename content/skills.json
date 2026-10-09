@@ -138,7 +138,7 @@
       "symbol": "Re",
       "name": "React",
       "family": "frontend",
-      "text": "Portals, dashboards and micro-frontends at Avanade, Toshiba, OCBC and Visa.",
+      "text": "Portals, dashboards and micro-frontends at Avanade (Client: MAS), Toshiba, OCBC and Visa.",
       "logo": "react"
     },
     {
@@ -263,21 +263,21 @@
       "symbol": "Dk",
       "name": "Docker",
       "family": "cloud",
-      "text": "Containerised services at Avanade, Toshiba and OCBC.",
+      "text": "Containerised services at Avanade (Client: MAS), Toshiba and OCBC.",
       "logo": "docker"
     },
     {
       "symbol": "Os",
       "name": "OpenShift",
       "family": "cloud",
-      "text": "CI/CD pipelines at Toshiba and CBDC services at Avanade.",
+      "text": "CI/CD pipelines at Toshiba and CBDC services at Avanade (Client: MAS).",
       "logo": "openshift"
     },
     {
       "symbol": "Jk",
       "name": "Jenkins",
       "family": "cloud",
-      "text": "CI/CD at Avanade, Toshiba and Visa. Red Hat certified.",
+      "text": "CI/CD at Avanade (Client: MAS), Toshiba and Visa. Red Hat certified.",
       "logo": "jenkins"
     },
     {

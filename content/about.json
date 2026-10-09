@@ -2,8 +2,8 @@
   "$schema": "../schema/about.schema.json",
   "eyebrow": "About",
   "heading": "Hi, I'm __{name}.__",
-  "lead": "I build the systems regulated businesses run on: Java and Spring Boot microservices, event-driven with Kafka, with React.js and Angular front ends. In 12+ years I've shipped them for Avanade, OCBC, Visa, Toshiba and DHL.",
-  "body": "In my current role at Avanade I put generative AI into production: a RAG chatbot on OpenAI embeddings and pgvector for a financial platform. I work with Claude Code, GitHub Copilot and Cline every day, and I mentor engineers on AI-assisted delivery.",
+  "lead": "I build the systems regulated businesses run on: Java and Spring Boot microservices, event-driven with Kafka, with React.js and Angular front ends. In 12+ years I've shipped them for Avanade (Client: MAS), OCBC, Visa, Toshiba and DHL.",
+  "body": "In my current role at Avanade (Client: MAS) I put generative AI into production: a RAG chatbot on OpenAI embeddings and pgvector for a financial platform. I work with Claude Code, GitHub Copilot and Cline every day, and I mentor engineers on AI-assisted delivery.",
   "roles": {
     "label": "What you can hire me for",
     "items": [
@@ -68,7 +68,7 @@
       },
       {
         "label": "Currently",
-        "value": "Avanade Asia Pte Ltd, deployed at Monetary Authority of Singapore"
+        "value": "Avanade Asia Pte Ltd (Client: MAS)"
       },
       {
         "label": "Experience",

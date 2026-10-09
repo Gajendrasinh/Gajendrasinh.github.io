@@ -9,7 +9,7 @@
       "sector": "Regulator",
       "period": "Nov 2025 – present",
       "title": "Senior Full Stack Developer & AI Engineer",
-      "organisation": "Avanade Asia Pte Ltd",
+      "organisation": "Avanade Asia Pte Ltd (Client: MAS)",
       "detail": "deployed at Monetary Authority of Singapore",
       "text": "Architected [PathFin.ai](https://pathfin.ai/), a financial AI platform with a RAG chatbot in production, and a two-portal CBDC issuance platform on Hyperledger Besu that passed the client's security audits.",
       "tags": [

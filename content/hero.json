@@ -8,7 +8,7 @@
   ],
   "who": "__{name}__ · {location}",
   "title": "Full Stack *&* AI Engineer.",
-  "tagline": "Senior engineer and technical lead. 12+ years shipping production platforms for Avanade, OCBC, Visa, Toshiba and DHL, now with generative AI in production.",
+  "tagline": "Senior engineer and technical lead. 12+ years shipping production platforms for Avanade (Client: MAS), OCBC, Visa, Toshiba and DHL, now with generative AI in production.",
   "actions": [
     {
       "label": "Download resume",
@@ -44,7 +44,7 @@
   "clients": {
     "label": "Platforms delivered for",
     "names": [
-      "Avanade",
+      "Avanade (Client: MAS)",
       "OCBC Bank",
       "Visa",
       "Toshiba Global Commerce",
