@@ -10,6 +10,11 @@
 .panel.open .tab{display:none}
 .body{display:none;padding:clamp(28px,3vw,44px);grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:32px;min-width:620px;height:100%}
 .panel.open .body{display:grid;animation:rise .6s .12s var(--ease) both}
+/* Side-by-side layout: the script gives the row one fixed height (the tallest project) and lays every
+   project out at its final width, so nothing reflows or changes height while a panel slides open. */
+.acc.sized{height:var(--acc-h)}
+.acc.sized .body{width:var(--open-w);min-width:0}
+.acc.measuring .body{display:grid;position:absolute;left:0;top:0;height:auto;visibility:hidden;animation:none}
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .body h3{font-size:clamp(1.75rem,2.8vw,2.5rem);font-weight:600;letter-spacing:-.03em;line-height:1.08;margin:8px 0 14px}
 .body h3:focus{outline:none}
