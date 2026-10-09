@@ -7,6 +7,13 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # While Pages > Source is still "Deploy from a branch", GitHub also publishes the repository's
+  # raw files (the README) on every push, sometimes after this workflow. Running again once that
+  # default build finishes keeps the real site on top. With Source set to "GitHub Actions" the
+  # default build no longer runs and this trigger never fires.
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
 
 permissions:
   contents: read
